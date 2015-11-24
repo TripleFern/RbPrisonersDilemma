@@ -1,0 +1,9 @@
+default_opponent_strategy(avg):	<%= @default_opponent_strategy_avg %>
+happiness(avg):	<%= @happiness_avg %>
+weight(avg):	<%= @weight_avg %>
+div(avg):	<%= @div_avg %>
+count(avg):	<%= @count_avg %>
+listen(avg):	<%= @listen_avg %>
+listen_weight(avg):	<%= @listen_weight_avg %>
+Agents:	<%= agents_overview.size %>
+Total count:	<%= total_count %>

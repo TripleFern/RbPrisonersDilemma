@@ -1,0 +1,32 @@
+=begin
+yaml_file = File.open("preference.yaml","r")
+GameEngine.set_preference(yaml_file)
+game_thread = Array.new
+game_thread << GameEngine.main_loop()
+#print "Starting the main game thread.....:" + game_thread[0].status 
+
+stat = AgentStatus.new
+monitor_thread = GameEngine.start_monitor(stat)
+
+core_tg = ThreadGroup.new
+core_tg.add(game_thread[0])
+core_tg.add(monitor_thread)
+
+thread_list = core_tg.list
+thread_list.each do |th|
+  th.abort_on_exception = true
+end
+ 
+=end
+
+
+=begin
+thread_list.each do |th|
+  th.join
+end
+Thread.kill(game_thread[0])
+Thread.kill(monitor_thread)
+monitor_thread.join
+game_thread[0].join
+=end
+

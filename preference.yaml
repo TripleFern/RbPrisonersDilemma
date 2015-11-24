@@ -1,0 +1,4 @@
+--- 
+:num: 50
+:distance_type: :topology
+:regeneration_method: :fixed

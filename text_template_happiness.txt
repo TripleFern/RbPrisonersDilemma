@@ -1,0 +1,3 @@
+<% @happiness_stat.each_index do |i| -%>
+happiness: <%=i*2.0/@hprec%>~<%=(i+1)*2.0/@hprec%>:	<%=@happiness_stat[i]%>
+<% end %>
